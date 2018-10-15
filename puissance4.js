@@ -13,42 +13,149 @@ const colonne4 = document.querySelector("#col4");
 const colonne5 = document.querySelector("#col5");
 const colonne6 = document.querySelector("#col6");
 const colonne7 = document.querySelector("#col7");
+const first = document.querySelector(".first");
+const fond = document.querySelector(".fondjeu");
+const cas = document.querySelectorAll(".case");
 var rempli = false ;
 
-console.log(colonne1);
-console.log(colonne2);
-console.log(colonne3);
-console.log(colonne4);
-console.log(colonne5);
-console.log(colonne6);
-console.log(colonne7);
-
 colonne1.addEventListener("click", function(){
+
 for(let i = arr1.length -1; i >= 0; i--) {
- console.log(arr1[i]);   
- if(arr1[i].style.backgroundColor=="white" && rempli == false) {
-     arr1[i].style.backgroundColor=couleur;
+
+ if(arr1[i].classList.contains("blanc") && rempli == false) {
+     arr1[i].classList.remove("blanc");
+     arr1[i].classList.add(couleur);
      rempli = true 
+     couleur == "rouge" ? couleur = "jaune" : couleur = "rouge";
+
+    //  if (couleur == "rouge") {
+    //      couleur == "jaune";
+    //  } else {
+    //      couleur ="rouge";
+    //  }
 }
 }
 rempli=false;
 })
+
 colonne2.addEventListener("click", function(){
+
+    for(let i = arr2.length -1; i >= 0; i--) {
+
+        if(arr2[i].classList.contains("blanc") && rempli == false) {
+            arr2[i].classList.remove("blanc");
+            arr2[i].classList.add(couleur);
+            rempli = true 
+            couleur == "rouge" ? couleur = "jaune" : couleur = "rouge";
+       
+           //  if (couleur == "rouge") {
+           //      couleur == "jaune";
+           //  } else {
+           //      couleur ="rouge";
+           //  }
+       }
+       }
+       rempli=false;
 
 })
 colonne3.addEventListener("click", function(){
 
+    for(let i = arr3.length -1; i >= 0; i--) {
+
+        if(arr3[i].classList.contains("blanc") && rempli == false) {
+            arr3[i].classList.remove("blanc");
+            arr3[i].classList.add(couleur);
+            rempli = true 
+            couleur == "rouge" ? couleur = "jaune" : couleur = "rouge";
+       
+           //  if (couleur == "rouge") {
+           //      couleur == "jaune";
+           //  } else {
+           //      couleur ="rouge";
+           //  }
+       }
+       }
+       rempli=false;
+
 })
 colonne4.addEventListener("click", function(){
+
+    for(let i = arr4.length -1; i >= 0; i--) {
+
+        if(arr4[i].classList.contains("blanc") && rempli == false) {
+            arr4[i].classList.remove("blanc");
+            arr4[i].classList.add(couleur);
+            rempli = true 
+            couleur == "rouge" ? couleur = "jaune" : couleur = "rouge";
+       
+           //  if (couleur == "rouge") {
+           //      couleur == "jaune";
+           //  } else {
+           //      couleur ="rouge";
+           //  }
+       }
+       }
+       rempli=false;
 
 })
 colonne5.addEventListener("click", function(){
 
+    for(let i = arr5.length -1; i >= 0; i--) {
+
+        if(arr5[i].classList.contains("blanc") && rempli == false) {
+            arr5[i].classList.remove("blanc");
+            arr5[i].classList.add(couleur);
+            rempli = true 
+            couleur == "rouge" ? couleur = "jaune" : couleur = "rouge";
+       
+           //  if (couleur == "rouge") {
+           //      couleur == "jaune";
+           //  } else {
+           //      couleur ="rouge";
+           //  }
+       }
+       }
+       rempli=false;
+
 })
 colonne6.addEventListener("click", function(){
 
+    for(let i = arr6.length -1; i >= 0; i--) {
+
+        if(arr6[i].classList.contains("blanc") && rempli == false) {
+            arr6[i].classList.remove("blanc");
+            arr6[i].classList.add(couleur);
+            rempli = true 
+            couleur == "rouge" ? couleur = "jaune" : couleur = "rouge";
+       
+           //  if (couleur == "rouge") {
+           //      couleur == "jaune";
+           //  } else {
+           //      couleur ="rouge";
+           //  }
+       }
+       }
+       rempli=false;
+
 })
 colonne7.addEventListener("click", function(){
+
+    for(let i = arr7.length -1; i >= 0; i--) {
+
+        if(arr7[i].classList.contains("blanc") && rempli == false) {
+            arr7[i].classList.remove("blanc");
+            arr7[i].classList.add(couleur);
+            rempli = true 
+            couleur == "rouge" ? couleur = "jaune" : couleur = "rouge";
+       
+           //  if (couleur == "rouge") {
+           //      couleur == "jaune";
+           //  } else {
+           //      couleur ="rouge";
+           //  }
+       }
+       }
+       rempli=false;
 
 })
 
