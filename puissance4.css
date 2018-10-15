@@ -19,10 +19,6 @@ h1:hover{
 	font-size: 8rem;
 	transition: 1s;
 }
-.imgtitle {
-	background: url(jeu2.jpg);
-	height: 30vh;
-}
 .quatre{
 	color: red;
 	font-size: 6rem;
@@ -34,6 +30,11 @@ h1:hover{
 	transition: 1s;
 
 }
+.imgtitle {
+	background: url(jeu2.jpg);
+	height: 30vh;
+}
+
 .fondnav{
 	font-family: 'Mali', cursive;
 	font-weight: bold;
@@ -70,12 +71,13 @@ h1:hover{
 
 .fondjeu{
 	height: 60vh;
-	width: 70vh;
+	width: 60vh;
 	padding: 0px;
 	opacity: .9;
 	box-shadow: -1px 2px 12px 0px rgba(0,0,0,0.75);
 	border: solid black 3px;
-	margin-top: 50px;
+	margin-top: 20px;
+	border-radius: 2%;
 
 }
 .fondfooter{
@@ -83,7 +85,7 @@ h1:hover{
 
 }
 .case {
-	border: solid black 1px;
+	border: solid black 4px;
 	height: 60vh;
     border-radius: 50%;
 }
@@ -101,86 +103,99 @@ h1:hover{
 }
 
 #col1{
-	border: solid black 1px;
+
 	width: 7vw;
 
 }
 #col2{
-	border: solid black 1px;
+
 	width: 7vw;
 
 }
 #col3{
-	border: solid black 1px;
+
 	width: 7vw;
 
 }
 #col4{
-	border: solid black 1px;
+
 	width: 7vw;
 
 }
 #col5{
-	border: solid black 1px;
+
 	width: 7vw;
 
 }
 #col6{
-	border: solid black 1px;
+
 	width: 7vw;
 
 }
 #col7{
-	border: solid black 1px;
+
 	width: 7vw;
 
 }
-
+.resultat{
+	margin-top: 30px;
+	margin-bottom: 30px;
+	height: 50px;
+	width: 100px;
+	border:solid black 3px;
+	border-radius: 10%;
+}
 @media (max-width: 575px) and (orientation: portrait){
 
+h1 {
+	 font-size: 40px;
+}
+.quatre {
+	font-size: 40px;
+}
 .fondjeu{
 	height: 35vh;
     width: 42vh;
     padding: 0px;
 
+
 }
 #col1{
-	border: solid black 1px;
+
 	width: 13vw;
 
 }
 #col2{
-	border: solid black 1px;
+
 	width: 13vw;
 
 }
 #col3{
-	border: solid black 1px;
+
 	width: 13vw;
 
 }
 #col4{
-	border: solid black 1px;
+
 	width: 13vw;
 
 }
 #col5{
-	border: solid black 1px;
+
 	width: 13vw;
 
 }
 #col6{
-	border: solid black 1px;
+
 	width: 13vw;
 
 }
 #col7{
-	border: solid black 1px;
+
 	width: 13vw;
 
 }
 .case {
-	border: solid black 1px;
     height: 60vh;
     border-radius: 50%;
     background-color: white;
@@ -197,46 +212,122 @@ h1:hover{
 
 }
 #col1{
-	border: solid black 1px;
+
 	width: 13vw;
 
 }
 #col2{
-	border: solid black 1px;
+
 	width: 13vw;
 
 }
 #col3{
-	border: solid black 1px;
+
 	width: 13vw;
 
 }
 #col4{
-	border: solid black 1px;
+
 	width: 13vw;
 
 }
 #col5{
-	border: solid black 1px;
+
 	width: 13vw;
 
 }
 #col6{
-	border: solid black 1px;
+
 	width: 13vw;
 
 }
 #col7{
-	border: solid black 1px;
+
 	width: 13vw;
 
 }
 .case {
-	border: solid black 1px;
     height: 60vh;
     border-radius: 50%;
     background-color: white;
 }
 
+
+}
+@media (min-width: 575px) and (orientation: landscape){
+	h1 {
+	 font-size: 40px;
+}
+.quatre {
+	font-size: 40px;
+}
+h1:hover{
+	color: yellow;
+	opacity: .8;
+	text-transform: uppercase;
+	text-shadow: 0 3px 5px rgba(0,0,0,1);
+	padding-bottom: 35px;
+	font-size: 50px;
+	transition: 1s;
+}
+.quatre:hover{
+	color: red;
+	font-size: 50px;
+	transition: 1s;
+
+}
+
+	
+	}
+@media (min-width: 670px) and (max-width: 808px) {
+	.fondjeu{
+	height: 35vh;
+    width: 42vh;
+    padding: 0px;
+
+}
+#col1{
+
+	width: 13vw;
+
+}
+#col2{
+
+	width: 13vw;
+
+}
+#col3{
+
+	width: 13vw;
+
+}
+#col4{
+
+	width: 13vw;
+
+}
+#col5{
+
+	width: 13vw;
+
+}
+#col6{
+
+	width: 13vw;
+
+}
+#col7{
+
+	width: 13vw;
+
+}
+.case {
+    height: 60vh;
+    border-radius: 50%;
+    background-color: white;
+}
+
+
+}
 
 }
