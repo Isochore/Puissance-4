@@ -85,7 +85,7 @@ h1:hover{
 .case {
 	border: solid black 1px;
 	height: 60vh;
-	border-radius: 50%;
+    border-radius: 50%;
 }
 
 .blanc {
