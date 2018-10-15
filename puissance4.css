@@ -120,3 +120,55 @@
 
 
 }
+@media (min-width: 575px) and (orientation: portrait){
+
+.fondjeu{
+	height: 35vh;
+    width: 42vh;
+    padding: 0px;
+    background-color: blue;
+}
+#col1{
+	border: solid black 1px;
+	width: 13vw;
+
+}
+#col2{
+	border: solid black 1px;
+	width: 13vw;
+
+}
+#col3{
+	border: solid black 1px;
+	width: 13vw;
+
+}
+#col4{
+	border: solid black 1px;
+	width: 13vw;
+
+}
+#col5{
+	border: solid black 1px;
+	width: 13vw;
+
+}
+#col6{
+	border: solid black 1px;
+	width: 13vw;
+
+}
+#col7{
+	border: solid black 1px;
+	width: 13vw;
+
+}
+.case {
+	border: solid black 1px;
+    height: 60vh;
+    border-radius: 50%;
+    background-color: white;
+}
+
+
+}
