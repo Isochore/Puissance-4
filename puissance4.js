@@ -15,18 +15,24 @@ const colonne6 = document.querySelector("#col6");
 const colonne7 = document.querySelector("#col7");
 var rempli = false ;
 
-console.log(colonne1);
-console.log(colonne2);
-console.log(colonne3);
-console.log(colonne4);
-console.log(colonne5);
-console.log(colonne6);
-console.log(colonne7);
+for(let i = arr1.length -1; i >= 0; i--) {
+    arr1[i].style.backgroundColor="white";
+}
+
+// console.log(colonne1);
+// console.log(colonne2);
+// console.log(colonne3);
+// console.log(colonne4);
+// console.log(colonne5);
+// console.log(colonne6);
+// console.log(colonne7);
 
 colonne1.addEventListener("click", function(){
 for(let i = arr1.length -1; i >= 0; i--) {
- console.log(arr1[i]);   
- if(arr1[i].style.backgroundColor=="white" && rempli == false) {
+//  console.log(arr1[i]);   
+console.log(arr1[i]);
+ console.log(arr1[i].style.backgroundColor);
+ if(arr1[i].style.backgroundColor == "white" && rempli == false) {
      arr1[i].style.backgroundColor=couleur;
      rempli = true 
 }
