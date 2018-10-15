@@ -18,9 +18,20 @@
 	border: solid black 1px;
 	height: 60vh;
 	border-radius: 50%;
-	background-color:white;
-
 }
+
+.blanc {
+    background-color: white;
+}
+
+.rouge {
+    background-color: red;
+}
+
+.jaune {
+    background-color: yellow;
+}
+
 #col1{
 	border: solid black 1px;
 	width: 7vw;
