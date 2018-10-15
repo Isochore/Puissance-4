@@ -1,0 +1,53 @@
+.fondpage{
+	background: ;
+	height: 100vh;
+}
+.fondjeu{
+	height: 60vh;
+	width: 70vh;
+	padding: 0px;
+	background-color: blue;
+}
+.case {
+	border: solid black 1px;
+	height: 60vh;
+	border-radius: 50%;
+	background-color:white;
+
+}
+#col1{
+	border: solid black 1px;
+	width: 7vw;
+
+}
+#col2{
+	border: solid black 1px;
+	width: 7vw;
+
+}
+#col3{
+	border: solid black 1px;
+	width: 7vw;
+
+}
+#col4{
+	border: solid black 1px;
+	width: 7vw;
+
+}
+#col5{
+	border: solid black 1px;
+	width: 7vw;
+
+}
+#col6{
+	border: solid black 1px;
+	width: 7vw;
+
+}
+#col7{
+	border: solid black 1px;
+	width: 7vw;
+
+}
+
