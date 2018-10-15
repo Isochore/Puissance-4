@@ -1,5 +1,7 @@
 .fondpage{
-	background: ;
+	background: url(jeu.jpg); 
+	background-size: cover;
+	background-repeat: no-repeat;
 	height: 100vh;
 }
 .fondjeu{
@@ -7,6 +9,10 @@
 	width: 70vh;
 	padding: 0px;
 	background-color: blue;
+	opacity: .9;
+	box-shadow: 3px 2px 8px 2px rgba(0,0,0,0.75);
+	border: solid black 3px;
+
 }
 .case {
 	border: solid black 1px;
@@ -51,3 +57,55 @@
 
 }
 
+@media (max-width: 575px) and (orientation: portrait){
+
+.fondjeu{
+	height: 35vh;
+    width: 42vh;
+    padding: 0px;
+    background-color: blue;
+}
+#col1{
+	border: solid black 1px;
+	width: 13vw;
+
+}
+#col2{
+	border: solid black 1px;
+	width: 13vw;
+
+}
+#col3{
+	border: solid black 1px;
+	width: 13vw;
+
+}
+#col4{
+	border: solid black 1px;
+	width: 13vw;
+
+}
+#col5{
+	border: solid black 1px;
+	width: 13vw;
+
+}
+#col6{
+	border: solid black 1px;
+	width: 13vw;
+
+}
+#col7{
+	border: solid black 1px;
+	width: 13vw;
+
+}
+.case {
+	border: solid black 1px;
+    height: 60vh;
+    border-radius: 50%;
+    background-color: white;
+}
+
+
+}
