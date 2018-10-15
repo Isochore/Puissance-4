@@ -1,17 +1,85 @@
+body {
+	
+}
+h1{
+	color: #007bff;
+	text-transform: uppercase;
+	text-shadow: 0 3px 5px rgba(0,0,0,1);
+	padding-top: 25px;
+	padding-bottom: 25px;
+	font-size: 6rem;
+	font-family: 'Mali', cursive;
+}
+h1:hover{
+	color: yellow;
+	opacity: .8;
+	text-transform: uppercase;
+	text-shadow: 0 3px 5px rgba(0,0,0,1);
+	padding-bottom: 35px;
+	font-size: 8rem;
+	transition: 1s;
+}
+.imgtitle {
+	background: url(jeu2.jpg);
+	height: 30vh;
+}
+.quatre{
+	color: red;
+	font-size: 6rem;
+
+}
+.quatre:hover{
+	color: red;
+	font-size: 8rem;
+	transition: 1s;
+
+}
+.fondnav{
+	font-family: 'Mali', cursive;
+	font-weight: bold;
+	background-color: #007bff !important;
+
+}
+.regle{
+	font-family: 'Mali', cursive;
+	background: url(regle.jpg);
+	background-size: cover;
+	background-position: top;
+	background-repeat: no-repeat;
+
+}
+.regle h2{
+	font-size: 40px;
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+.regle p{
+	font-size: 30px;
+	padding-bottom: 50px;
+}
+.regle a{
+	font-size: 15px;
+	margin-bottom: 50px;
+}
 .fondpage{
-	background: url(jeu.jpg); 
+	background: url(regle.jpg); 
 	background-size: cover;
 	background-repeat: no-repeat;
 	height: 100vh;
 }
+
 .fondjeu{
 	height: 60vh;
 	width: 70vh;
 	padding: 0px;
-	background-color: blue;
 	opacity: .9;
-	box-shadow: 3px 2px 8px 2px rgba(0,0,0,0.75);
+	box-shadow: -1px 2px 12px 0px rgba(0,0,0,0.75);
 	border: solid black 3px;
+	margin-top: 50px;
+
+}
+.fondfooter{
+	background-color: #007bff !important;
 
 }
 .case {
@@ -74,7 +142,7 @@
 	height: 35vh;
     width: 42vh;
     padding: 0px;
-    background-color: blue;
+
 }
 #col1{
 	border: solid black 1px;
@@ -126,7 +194,7 @@
 	height: 35vh;
     width: 42vh;
     padding: 0px;
-    background-color: blue;
+
 }
 #col1{
 	border: solid black 1px;
