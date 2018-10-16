@@ -12,8 +12,11 @@ const colonne4 = document.querySelector("#col4");
 const colonne5 = document.querySelector("#col5");
 const colonne6 = document.querySelector("#col6");
 const colonne7 = document.querySelector("#col7");
-const resultat = document.querySelector(".resultat");
 const joueur = document.querySelector(".joueur");
+const resultat = document.querySelector(".resultat");
+const humain = document.querySelector(".humain");
+const ordi = document.querySelector(".ordi");
+const ai = document.querySelector(".ai");
 const arrG = [arr1, arr2, arr3, arr4, arr5, arr6, arr7];
 var rempli = false;
 var count = 0;
@@ -23,6 +26,34 @@ var winR = false;
 var winJ = false;
 var plein = 0;
 var mode = "1vs2";
+
+humain.addEventListener("click", function () {
+
+    mode = "1vs2";
+    ordi.classList.remove("active");
+    ai.classList.remove("active");
+    humain.classList.add("active");
+
+})
+
+ordi.addEventListener("click", function () {
+
+    mode = "1vscpu";
+    humain.classList.remove("active");
+    ai.classList.remove("active");
+    ordi.classList.add("active");
+
+})
+
+
+ai.addEventListener("click", function () {
+
+    mode = "1vsai";
+    humain.classList.remove("active");
+    ordi.classList.remove("active");
+    ai.classList.add("active");
+})
+
 
 colonne1.addEventListener("click", function () {
 
@@ -129,14 +160,10 @@ function gagnerDiag() {
 
                 if (count >= 4 && countColor == "rouge") {
                     winR = true;
-                    // console.log("Rouge a gagné diag1");
                     gagnerjeuxR();
-
                 } else if (count >= 4 && countColor == "jaune") {
                     winJ = true;
-                    // console.log("Jaune a gagné diag1");
                     gagnerjeuxJ();
-
                 }
             }
             count = 0;
@@ -177,14 +204,10 @@ function gagnerDiag() {
 
                 if (count >= 4 && countColor == "rouge") {
                     winR = true;
-                    // console.log("Rouge a gagné diag2");
                     gagnerjeuxR();
-
                 } else if (count >= 4 && countColor == "jaune") {
                     winJ = true;
-                    // console.log("Jaune a gagné diag2");
                     gagnerjeuxJ();
-
                 }
             }
             count = 0;
@@ -198,29 +221,24 @@ function gagnerDiag() {
 
 function pion(array) {
 
-
     if (winR == false && winJ == false) {
         if (mode == "1vs2") {
 
-    for (let i = array.length - 1; i >= 0; i--) {
+            for (let i = array.length - 1; i >= 0; i--) {
 
-            if (array[i].classList.contains("blanc") && rempli == false) {
-                array[i].classList.remove("blanc");
-                array[i].classList.add(couleur);
-                rempli = true;
-                couleur == "rouge" ? couleur = "jaune" : couleur = "rouge";
-                console.log("tour");
-                tourJoueur();
-                // console.log("tourJoueur");
+                if (array[i].classList.contains("blanc") && rempli == false) {
+                    array[i].classList.remove("blanc");
+                    array[i].classList.add(couleur);
+                    rempli = true;
+                    couleur == "rouge" ? couleur = "jaune" : couleur = "rouge";
+                    tourJoueur();
 
-        }
-    }
-    rempli = false;
-    gagnerCol();
-    gagnerRow();
-    gagnerDiag();
-}
-}
+                }
+            }
+            rempli = false;
+            gagnerCol();
+            gagnerRow();
+            gagnerDiag();
 
          else if (mode = "1vscpu") {
             if (couleur == "rouge") {
@@ -286,11 +304,9 @@ function verif(i, j) {
     if (count >= 4 && countColor == "rouge") {
         winR = true;
         gagnerjeuxR();
-
     } else if (count >= 4 && countColor == "jaune") {
         winJ = true;
         gagnerjeuxJ();
-
     }
 }
 
@@ -301,17 +317,17 @@ function rnd(min, max) {
 //   JEANNE
 // C'est à vous de jouer joueur jaune ou rouge 
 function tourJoueur() {
-   joueur.innerHTML="C'est à votre tour de jouer : joueur " + couleur;
-   
-
-}
-
-// Joueur Rouge à gagner 
-function gagnerjeuxR() {
-    resultat.innerHTML="Rouge à gagné";
-
-}
-// Joueur Jaune à gagner
-function gagnerjeuxJ() {
-    resultat.innerHTML="Jaune à gagné";
-}
+    joueur.innerHTML="C'est à votre tour de jouer : joueur " + couleur;
+    
+ 
+ }
+ 
+ // Joueur Rouge à gagner 
+ function gagnerjeuxR() {
+     resultat.innerHTML="Rouge à gagné";
+ 
+ }
+ // Joueur Jaune à gagner
+ function gagnerjeuxJ() {
+     resultat.innerHTML="Jaune à gagné";
+ }
