@@ -158,10 +158,14 @@ function gagnerDiag() {
 
                 if (count >= 4 && countColor == "rouge") {
                     winR = true;
-                    console.log("Rouge a gagné diag1");
+                    // console.log("Rouge a gagné diag1");
+                    gagnerjeuxR();
+
                 } else if (count >= 4 && countColor == "jaune") {
                     winJ = true;
-                    console.log("Jaune a gagné diag1");
+                    // console.log("Jaune a gagné diag1");
+                    gagnerjeuxJ();
+
                 }
             }
             count = 0;
@@ -202,10 +206,14 @@ function gagnerDiag() {
 
                 if (count >= 4 && countColor == "rouge") {
                     winR = true;
-                    console.log("Rouge a gagné diag2");
+                    // console.log("Rouge a gagné diag2");
+                    gagnerjeuxR();
+
                 } else if (count >= 4 && countColor == "jaune") {
                     winJ = true;
-                    console.log("Jaune a gagné diag2");
+                    // console.log("Jaune a gagné diag2");
+                    gagnerjeuxJ();
+
                 }
             }
             count = 0;
@@ -219,23 +227,29 @@ function gagnerDiag() {
 
 function pion(array) {
 
+
     if (winR == false && winJ == false) {
         if (mode == "1vs2") {
 
-            for (let i = array.length - 1; i >= 0; i--) {
+    for (let i = array.length - 1; i >= 0; i--) {
 
-                if (array[i].classList.contains("blanc") && rempli == false) {
-                    array[i].classList.remove("blanc");
-                    array[i].classList.add(couleur);
-                    rempli = true;
-                    couleur == "rouge" ? couleur = "jaune" : couleur = "rouge";
+            if (array[i].classList.contains("blanc") && rempli == false) {
+                array[i].classList.remove("blanc");
+                array[i].classList.add(couleur);
+                rempli = true;
+                couleur == "rouge" ? couleur = "jaune" : couleur = "rouge";
+                console.log("tour");
+                tourJoueur();
+                // console.log("tourJoueur");
 
-                }
-            }
-            rempli = false;
-            gagnerCol();
-            gagnerRow();
-            gagnerDiag();
+        }
+    }
+    rempli = false;
+    gagnerCol();
+    gagnerRow();
+    gagnerDiag();
+}
+}
 
         } else if (mode = "1vscpu") {
             if (couleur == "rouge") {
@@ -301,13 +315,33 @@ function verif(i, j) {
 
     if (count >= 4 && countColor == "rouge") {
         winR = true;
-        console.log("Rouge a gagné");
+        gagnerjeuxR();
+
     } else if (count >= 4 && countColor == "jaune") {
         winJ = true;
-        console.log("Jaune a gagné");
+        gagnerjeuxJ();
+
     }
 }
 
 function rnd(min, max) {
     return Math.random() * (max - min) + min;
+}
+
+//   JEANNE
+// C'est à vous de jouer joueur jaune ou rouge 
+function tourJoueur() {
+   joueur.innerHTML="C'est à votre tour de jouer : joueur " + couleur;
+   
+
+}
+
+// Joueur Rouge à gagner 
+function gagnerjeuxR() {
+    resultat.innerHTML="Rouge à gagné";
+
+}
+// Joueur Jaune à gagner
+function gagnerjeuxJ() {
+    resultat.innerHTML="Jaune à gagné";
 }
