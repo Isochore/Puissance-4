@@ -5,7 +5,6 @@ const arr4 = document.querySelectorAll("#col4 div");
 const arr5 = document.querySelectorAll("#col5 div");
 const arr6 = document.querySelectorAll("#col6 div");
 const arr7 = document.querySelectorAll("#col7 div");
-var couleur = "rouge";
 const colonne1 = document.querySelector("#col1");
 const colonne2 = document.querySelector("#col2");
 const colonne3 = document.querySelector("#col3");
@@ -21,182 +20,243 @@ var countColor;
 var winR = false;
 var winJ = false;
 var plein = 0;
+var mode = "1vs2";
 
-if (winR == false && winJ == false) {
+    colonne1.addEventListener("click", function () {
 
-colonne1.addEventListener("click", function(){
+        pion(arr1);
 
-    console.log("je fais la fonction");
+    })
 
-for(let i = arr1.length -1; i >= 0; i--) {
+    colonne2.addEventListener("click", function () {
 
- if(arr1[i].classList.contains("blanc") && rempli == false) {
-     arr1[i].classList.remove("blanc");
-     arr1[i].classList.add(couleur);
-     rempli = true 
-     couleur == "rouge" ? couleur = "jaune" : couleur = "rouge";
+        pion(arr2);
 
-    //  if (couleur == "rouge") {
-    //      couleur == "jaune";
-    //  } else {
-    //      couleur ="rouge";
-    //  }
-}
-}
-rempli=false;
-})
+    })
+    colonne3.addEventListener("click", function () {
 
-}
+        pion(arr3);
 
-colonne2.addEventListener("click", function(){
+    })
+    colonne4.addEventListener("click", function () {
 
-    for(let i = arr2.length -1; i >= 0; i--) {
+        pion(arr4);
 
-        if(arr2[i].classList.contains("blanc") && rempli == false) {
-            arr2[i].classList.remove("blanc");
-            arr2[i].classList.add(couleur);
-            rempli = true 
-            couleur == "rouge" ? couleur = "jaune" : couleur = "rouge";
-       
-           //  if (couleur == "rouge") {
-           //      couleur == "jaune";
-           //  } else {
-           //      couleur ="rouge";
-           //  }
-       }
-       }
-       rempli=false;
+    })
+    colonne5.addEventListener("click", function () {
 
-})
-colonne3.addEventListener("click", function(){
+        pion(arr5);
 
-    for(let i = arr3.length -1; i >= 0; i--) {
+    })
+    colonne6.addEventListener("click", function () {
 
-        if(arr3[i].classList.contains("blanc") && rempli == false) {
-            arr3[i].classList.remove("blanc");
-            arr3[i].classList.add(couleur);
-            rempli = true 
-            couleur == "rouge" ? couleur = "jaune" : couleur = "rouge";
-       
-           //  if (couleur == "rouge") {
-           //      couleur == "jaune";
-           //  } else {
-           //      couleur ="rouge";
-           //  }
-       }
-       }
-       rempli=false;
+        pion(arr6);
 
-})
-colonne4.addEventListener("click", function(){
+    })
+    colonne7.addEventListener("click", function () {
 
-    for(let i = arr4.length -1; i >= 0; i--) {
+        pion(arr7);
 
-        if(arr4[i].classList.contains("blanc") && rempli == false) {
-            arr4[i].classList.remove("blanc");
-            arr4[i].classList.add(couleur);
-            rempli = true 
-            couleur == "rouge" ? couleur = "jaune" : couleur = "rouge";
-       
-           //  if (couleur == "rouge") {
-           //      couleur == "jaune";
-           //  } else {
-           //      couleur ="rouge";
-           //  }
-       }
-       }
-       rempli=false;
-
-})
-colonne5.addEventListener("click", function(){
-
-    for(let i = arr5.length -1; i >= 0; i--) {
-
-        if(arr5[i].classList.contains("blanc") && rempli == false) {
-            arr5[i].classList.remove("blanc");
-            arr5[i].classList.add(couleur);
-            rempli = true 
-            couleur == "rouge" ? couleur = "jaune" : couleur = "rouge";
-       
-           //  if (couleur == "rouge") {
-           //      couleur == "jaune";
-           //  } else {
-           //      couleur ="rouge";
-           //  }
-       }
-       }
-       rempli=false;
-
-})
-colonne6.addEventListener("click", function(){
-
-    for(let i = arr6.length -1; i >= 0; i--) {
-
-        if(arr6[i].classList.contains("blanc") && rempli == false) {
-            arr6[i].classList.remove("blanc");
-            arr6[i].classList.add(couleur);
-            rempli = true 
-            couleur == "rouge" ? couleur = "jaune" : couleur = "rouge";
-       
-           //  if (couleur == "rouge") {
-           //      couleur == "jaune";
-           //  } else {
-           //      couleur ="rouge";
-           //  }
-       }
-       }
-       rempli=false;
-
-})
-colonne7.addEventListener("click", function(){
-
-    for(let i = arr7.length -1; i >= 0; i--) {
-
-        if(arr7[i].classList.contains("blanc") && rempli == false) {
-            arr7[i].classList.remove("blanc");
-            arr7[i].classList.add(couleur);
-            rempli = true 
-            couleur == "rouge" ? couleur = "jaune" : couleur = "rouge";
-       
-           //  if (couleur == "rouge") {
-           //      couleur == "jaune";
-           //  } else {
-           //      couleur ="rouge";
-           //  }
-       }
-       }
-       rempli=false;
-       gagnerCol();
-
-})
+    })
 
 function gagnerCol() {
-    for(let i = arrG.length -1; i >= 0; i--) {
-        for(let j = arrG[i].length -1; j >= 0; j--) {   
-            countColor = arrG[i][j].classList;
 
-            if (arrG[i][j].classList.contains("rouge")) {
-                countColor.contains("rouge") ? count++ : count = 1;
-            } else if (arrG[i][j].classList.contains("jaune")) {
-                countColor.contains("jaune") ? count++ : count = 1;
-            } else {
-                countColor.contains("blanc") ? count = 0 : true;
-                plein++;
-                // console.log("current " + plein);
-            }
+    for (let i = arrG.length - 1; i >= 0; i--) {
+        for (let j = arrG[i].length - 1; j >= 0; j--) {
 
-            if (count >= 4 && countColor.contains("rouge")) {
-                winR = true;
-            } else if (count >= 4 && countColor.contains("jaune")){
-                winJ = true;
-            }
-            console.log(count);
-            // console.log(winR);
-            // console.log(winJ);
-            }
-            // console.log(countColor);
+            verif(i, j);
+        }
+        count = 0;
     }
-    plein > 0 ? plein = 0 : plein = true;
-    // console.log("final " + plein);
 }
-// oui
+
+function gagnerRow() {
+
+    for (let j = arrG[0].length - 1; j >= 0; j--) {
+        for (let i = arrG.length - 1; i >= 0; i--) {
+
+            verif(i, j);
+
+        }
+        count = 0;
+    }
+}
+
+function gagnerDiag() {
+
+    // for (let i = 0, j = 3, fin = false; fin != true ; i++, j--) {
+    //     // console.log(i);
+    //     // console.log(j);
+    //         i == 3 && j == 0 ? fin = true : false;
+    // }
+
+    let Ylength = arrG.length;
+    let Xlength = arrG[0].length;
+    let maxLength = Math.max(Xlength, Ylength);
+    let temp;
+    for (let i = 0; i <= 2 * (maxLength - 1); ++i) {
+        temp = [];
+        for (let j = Ylength - 1; j >= 0; --j) {
+            var x = i - j;
+            if (x >= 0 && x < Xlength) {
+                temp.push(arrG[j][x]);
+            }
+        }
+        if (temp.length > 0) {
+            for (let k = 0; k < temp.length; ++k) {
+                // console.log(temp[k]);
+
+
+                if (temp[k].classList.contains("rouge")) {
+                    if (countColor == "rouge") {
+                        count++;
+                    } else if (countColor == "jaune") {
+                        count = 1;
+                    }
+                    countColor = "rouge";
+                } else if (temp[k].classList.contains("jaune")) {
+                    if (countColor == "jaune") {
+                        count++;
+                    } else if (countColor == "rouge") {
+                        count = 1;
+                    }
+                    countColor = "jaune";
+                } else {
+                    temp[k].classList.contains("blanc") ? count = 0 : true;
+                }
+
+                if (count >= 4 && countColor == "rouge") {
+                    winR = true;
+                    console.log("Rouge a gagné diag1");
+                } else if (count >= 4 && countColor == "jaune") {
+                    winJ = true;
+                    console.log("Jaune a gagné diag1");
+                }
+            }
+            count = 0;
+        }
+    }
+
+
+    for (let i = 0; i <= 2 * (maxLength - 1); ++i) {
+        temp = [];
+        for (let j = Ylength - 1; j >= 0; --j) {
+            var x = i - (Ylength - j);
+            if (x >= 0 && x < Xlength) {
+                temp.push(arrG[j][x]);
+            }
+        }
+        if (temp.length > 0) {
+            for (let k = 0; k < temp.length; ++k) {
+                // console.log(temp[k]);
+
+
+                if (temp[k].classList.contains("rouge")) {
+                    if (countColor == "rouge") {
+                        count++;
+                    } else if (countColor == "jaune") {
+                        count = 1;
+                    }
+                    countColor = "rouge";
+                } else if (temp[k].classList.contains("jaune")) {
+                    if (countColor == "jaune") {
+                        count++;
+                    } else if (countColor == "rouge") {
+                        count = 1;
+                    }
+                    countColor = "jaune";
+                } else {
+                    temp[k].classList.contains("blanc") ? count = 0 : true;
+                }
+
+                if (count >= 4 && countColor == "rouge") {
+                    winR = true;
+                    console.log("Rouge a gagné diag2");
+                } else if (count >= 4 && countColor == "jaune") {
+                    winJ = true;
+                    console.log("Jaune a gagné diag2");
+                }
+            }
+            count = 0;
+        }
+    }
+
+
+}
+
+
+
+function pion(array) {
+
+    if (winR == false && winJ == false) {
+
+    for (let i = array.length - 1; i >= 0; i--) {
+
+        if (array[i].classList.contains("blanc") && rempli == false) {
+            array[i].classList.remove("blanc");
+            array[i].classList.add(couleur);
+            rempli = true;
+            couleur == "rouge" ? couleur = "jaune" : couleur = "rouge";
+
+        }
+    }
+    rempli = false;
+    gagnerCol();
+    gagnerRow();
+    gagnerDiag();
+}
+}
+
+function pion(array) {
+
+    if (winR == false && winJ == false) {
+
+    for (let i = array.length - 1; i >= 0; i--) {
+
+        if (array[i].classList.contains("blanc") && rempli == false) {
+            array[i].classList.remove("blanc");
+            array[i].classList.add(couleur);
+            rempli = true;
+            couleur == "rouge" ? couleur = "jaune" : couleur = "rouge";
+
+        }
+    }
+    rempli = false;
+    // faire un for pour le cpu avec rnd col
+    gagnerCol();
+    gagnerRow();
+    gagnerDiag();
+}
+}
+
+function verif(i, j) {
+    if (arrG[i][j].classList.contains("rouge")) {
+        if (countColor == "rouge") {
+            count++;
+        } else if (countColor == "jaune") {
+            count = 1;
+        }
+        countColor = "rouge";
+    } else if (arrG[i][j].classList.contains("jaune")) {
+        if (countColor == "jaune") {
+            count++;
+        } else if (countColor == "rouge") {
+            count = 1;
+        }
+        countColor = "jaune";
+    } else {
+        arrG[i][j].classList.contains("blanc") ? count = 0 : true;
+    }
+
+    if (count >= 4 && countColor == "rouge") {
+        winR = true;
+        console.log("Rouge a gagné");
+    } else if (count >= 4 && countColor == "jaune") {
+        winJ = true;
+        console.log("Jaune a gagné");
+    }
+}
+
+function rnd(min, max) {
+    return Math.random() * (max - min) + min;
+  }
