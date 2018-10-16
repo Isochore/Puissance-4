@@ -280,7 +280,6 @@ function pion(array) {
             }
         }
     }
-}
 
 function verif(i, j) {
     if (arrG[i][j].classList.contains("rouge")) {
