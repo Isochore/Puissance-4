@@ -22,7 +22,7 @@ var countColor;
 var winR = false;
 var winJ = false;
 var plein = 0;
-var mode = "1vs2";
+var mode = "1vscpu";
 
 colonne1.addEventListener("click", function () {
 
@@ -200,8 +200,9 @@ function pion(array) {
 
 
     if (winR == false && winJ == false) {
+        if (mode == "1vs2") {
 
-        for (let i = array.length - 1; i >= 0; i--) {
+    for (let i = array.length - 1; i >= 0; i--) {
 
             if (array[i].classList.contains("blanc") && rempli == false) {
                 array[i].classList.remove("blanc");
@@ -212,20 +213,57 @@ function pion(array) {
                 tourJoueur();
                 // console.log("tourJoueur");
 
-            }
-
         }
-
-        rempli = false;
-        gagnerCol();
-        gagnerRow();
-        gagnerDiag();
-
     }
+    rempli = false;
+    gagnerCol();
+    gagnerRow();
+    gagnerDiag();
+}
 }
 
+        } else if (mode = "1vscpu") {
+            if (couleur == "rouge") {
 
+                for (let i = array.length - 1; i >= 0; i--) {
 
+                    if (array[i].classList.contains("blanc") && rempli == false && couleur == "rouge") {
+                        array[i].classList.remove("blanc");
+                        array[i].classList.add(couleur);
+                        rempli = true;
+                        couleur == "rouge" ? couleur = "jaune" : couleur = "rouge";
+                    }
+                }
+                rempli = false;
+                gagnerCol();
+                gagnerRow();
+                gagnerDiag();
+
+                if(winR != true && winJ != true) {
+                    setTimeout(function () {
+
+                        let rnd = Math.floor(Math.random() * (7));
+                        for (let i = arrG[rnd].length - 1; i >= 0; i--) {
+
+                            if (arrG[rnd][i].classList.contains("blanc") && rempli == false && couleur == "jaune") {
+                                arrG[rnd][i].classList.remove("blanc");
+                                arrG[rnd][i].classList.add(couleur);
+                                rempli = true;
+                                couleur == "rouge" ? couleur = "jaune" : couleur = "rouge";
+                            }
+                        }
+                        rempli = false;
+                        gagnerCol();
+                        gagnerRow();
+                        gagnerDiag();
+
+                    }, 800);
+                }
+
+            }
+        }
+    }
+}
 
 function verif(i, j) {
     if (arrG[i][j].classList.contains("rouge")) {
