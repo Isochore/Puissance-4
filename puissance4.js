@@ -199,3 +199,4 @@ function gagnerCol() {
     plein > 0 ? plein = 0 : plein = true;
     // console.log("final " + plein);
 }
+// oui
