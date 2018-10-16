@@ -69,7 +69,7 @@ h1:hover{
 }
 
 .fondjeu{
-/*	width: 45%;*/
+
 	padding: 5px;
 	opacity: .9;
 	box-shadow: -1px 2px 12px 0px rgba(0,0,0,0.75);
@@ -102,41 +102,7 @@ h1:hover{
     background-color: yellow;
 }
 
-/*#col1{
 
-	width: 7vw;
-
-}
-#col2{
-
-	width: 7vw;
-
-}
-#col3{
-
-	width: 7vw;
-
-}
-#col4{
-
-	width: 7vw;
-
-}
-#col5{
-
-	width: 7vw;
-
-}
-#col6{
-
-	width: 7vw;
-
-}
-#col7{
-
-	width: 7vw;
-
-}*/
 .resultat{
 	font-size: 20px;
 	margin: 10px;
@@ -148,7 +114,10 @@ h1:hover{
 }
 
 @media (max-width: 575px) and (orientation:portrait){ 
-	
+	.imgtitle {
+	background: url(jeu2.jpg);
+	height: 20vh;
+}	
 h1{
 	color: #007bff;
 	text-transform: uppercase;
@@ -185,49 +154,13 @@ h1:hover{
 
     border-radius: 50%;
 }
-/*.fondjeu {
-	width: 95%;
-}
 
-#col1{
-
-	width: 13vw;
-
-}
-#col2{
-
-	width: 13vw;
-
-}
-#col3{
-
-	width: 13vw;
-
-}
-#col4{
-
-	width: 13vw;
-
-}
-#col5{
-
-	width: 13vw;
-
-}
-#col6{
-
-	width: 13vw;
-
-}
-#col7{
-
-	width: 13vw;
-
-}
-*/
 }
 @media (max-width: 575px) and (orientation:landscape) { 
-	
+		.imgtitle {
+	background: url(jeu2.jpg);
+	height: 40vh;
+}
 h1{
 	color: #007bff;
 	text-transform: uppercase;
@@ -264,50 +197,14 @@ h1:hover{
 
     border-radius: 50%;
 }
-/*.fondjeu {
-	width: 60%;
-}
-
-
-#col1{
-
-	width: 13vw;
-
-}
-#col2{
-
-	width: 13vw;
-
-}
-#col3{
-
-	width: 13vw;
-
-}
-#col4{
-
-	width: 13vw;
-
-}
-#col5{
-
-	width: 13vw;
-
-}
-#col6{
-
-	width: 13vw;
-
-}
-#col7{
-
-	width: 13vw;
-
-}*/
 
 
 }
 @media (min-width: 576px) and (max-width: 767px) { 
+		.imgtitle {
+	background: url(jeu2.jpg);
+	height: 15vh;
+}
 	h1{
 	color: #007bff;
 	text-transform: uppercase;
@@ -344,46 +241,7 @@ h1:hover{
 
     border-radius: 50%;
 }
-/*.fondjeu {
-	width: 65%;
-}
 
-#col1{
-
-	width: 13vw;
-
-}
-#col2{
-
-	width: 13vw;
-
-}
-#col3{
-
-	width: 13vw;
-
-}
-#col4{
-
-	width: 13vw;
-
-}
-#col5{
-
-	width: 13vw;
-
-}
-#col6{
-
-	width: 13vw;
-
-}
-#col7{
-
-	width: 13vw;
-
-}
-*/
 
 }
 
@@ -428,9 +286,7 @@ h1:hover{
 
     border-radius: 50%;
 }
-/*.fondjeu {
-	width: 50%;
-}*/
+
 
 }
  @media (min-width: 768px) and (max-width: 991px) and (orientation:landscape) {
@@ -474,10 +330,7 @@ h1:hover{
 
     border-radius: 50%;
 }
-/*.fondjeu {
-	width: 50%;
-}
-*/
+
 }
 	
  @media (min-width: 992px) and (max-width: 1199px) and (orientation:landscape) {
@@ -518,9 +371,6 @@ h1:hover{
 
     border-radius: 50%;
 }
-/*.fondjeu {
-	width: 50%;
-}*/
 
 }
 @media (min-width: 992px) and (max-width: 1199px) and (orientation:portrait) {
@@ -564,8 +414,5 @@ h1:hover{
 
     border-radius: 50%;
 }
-/*.fondjeu {
-	width: 50%;
-}*/
 
 }

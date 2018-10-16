@@ -22,7 +22,7 @@ var countColor;
 var winR = false;
 var winJ = false;
 var plein = 0;
-var mode = "1vscpu";
+var mode = "1vs2";
 
 colonne1.addEventListener("click", function () {
 
@@ -222,7 +222,7 @@ function pion(array) {
 }
 }
 
-        } else if (mode = "1vscpu") {
+         else if (mode = "1vscpu") {
             if (couleur == "rouge") {
 
                 for (let i = array.length - 1; i >= 0; i--) {
@@ -263,7 +263,6 @@ function pion(array) {
             }
         }
     }
-}
 
 function verif(i, j) {
     if (arrG[i][j].classList.contains("rouge")) {
