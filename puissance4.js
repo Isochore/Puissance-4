@@ -239,9 +239,7 @@ function pion(array) {
             gagnerCol();
             gagnerRow();
             gagnerDiag();
-            // 
-
-         else if (mode = "1vscpu") {
+        } else if (mode = "1vscpu") {
             if (couleur == "rouge") {
 
                 for (let i = array.length - 1; i >= 0; i--) {
