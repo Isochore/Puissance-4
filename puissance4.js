@@ -12,6 +12,9 @@ const colonne4 = document.querySelector("#col4");
 const colonne5 = document.querySelector("#col5");
 const colonne6 = document.querySelector("#col6");
 const colonne7 = document.querySelector("#col7");
+const humain = document.querySelector(".humain");
+const ordi = document.querySelector(".ordi");
+const ai = document.querySelector(".ai");
 const arrG = [arr1, arr2, arr3, arr4, arr5, arr6, arr7];
 var rempli = false;
 var count = 0;
@@ -20,7 +23,35 @@ var countColor;
 var winR = false;
 var winJ = false;
 var plein = 0;
-var mode = "1vscpu";
+var mode = "1vs2";
+
+humain.addEventListener("click", function () {
+
+    mode = "1vs2";
+    ordi.classList.remove("active");
+    ai.classList.remove("active");
+    humain.classList.add("active");
+
+})
+
+ordi.addEventListener("click", function () {
+
+    mode = "1vscpu";
+    humain.classList.remove("active");
+    ai.classList.remove("active");
+    ordi.classList.add("active");
+
+})
+
+
+ai.addEventListener("click", function () {
+
+    mode = "1vsai";
+    humain.classList.remove("active");
+    ordi.classList.remove("active");
+    ai.classList.add("active");
+})
+
 
 colonne1.addEventListener("click", function () {
 
