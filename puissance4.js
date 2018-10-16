@@ -22,7 +22,7 @@ var countColor;
 var winR = false;
 var winJ = false;
 var plein = 0;
-var mode = "1vscpu";
+var mode = "1vs2";
 
 colonne1.addEventListener("click", function () {
 
@@ -221,8 +221,7 @@ function pion(array) {
     gagnerDiag();
 }
 }
-
-        } else if (mode = "1vscpu") {
+ else if (mode = "1vscpu") {
             if (couleur == "rouge") {
 
                 for (let i = array.length - 1; i >= 0; i--) {
@@ -263,7 +262,6 @@ function pion(array) {
             }
         }
     }
-}
 
 function verif(i, j) {
     if (arrG[i][j].classList.contains("rouge")) {
@@ -302,14 +300,12 @@ function rnd(min, max) {
 //   JEANNE
 // C'est à vous de jouer joueur jaune ou rouge 
 function tourJoueur() {
-   joueur.innerHTML="C'est à votre tour de jouer : joueur " + couleur;
-   
-
-}
-
+   joueur.innerHTML="C'est à votre tour de jouer : joueur " + couleur;}
+ 
 // Joueur Rouge à gagner 
 function gagnerjeuxR() {
     resultat.innerHTML="Rouge à gagné";
+
 
 }
 // Joueur Jaune à gagner
