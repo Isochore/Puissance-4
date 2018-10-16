@@ -239,6 +239,8 @@ function pion(array) {
             gagnerCol();
             gagnerRow();
             gagnerDiag();
+            // 
+
         } else if (mode = "1vscpu") {
             if (couleur == "rouge") {
 
@@ -280,6 +282,7 @@ function pion(array) {
             }
         }
     }
+}
 
 function verif(i, j) {
     if (arrG[i][j].classList.contains("rouge")) {
