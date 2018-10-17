@@ -17,7 +17,14 @@ const resultat = document.querySelector(".resultat");
 const humain = document.querySelector(".humain");
 const ordi = document.querySelector(".ordi");
 const ai = document.querySelector(".ai");
+const fondjeu = document.querySelector(".fondjeu");
+const money = document.querySelector(".money");
+const coin = document.querySelector(".coin");
 const arrG = [arr1, arr2, arr3, arr4, arr5, arr6, arr7];
+const titre = document.querySelector("h1");
+const bandeauColor = ["#ff0000","#ffff00","#40ff00","#1a1aff"];
+const nav = document.querySelector("nav");
+var c = 0;
 var rempli = false;
 var count = 0;
 var couleur = "rouge";
@@ -241,7 +248,7 @@ function pion(array) {
             gagnerDiag();
             // 
 
-        } else if (mode = "1vscpu") {
+        } else if (mode == "1vscpu") {
             if (couleur == "rouge") {
 
                 for (let i = array.length - 1; i >= 0; i--) {
@@ -326,10 +333,42 @@ function tourJoueur() {
  
  // Joueur Rouge à gagner 
  function gagnerjeuxR() {
-     resultat.innerHTML="Rouge à gagné";
+     resultat.innerHTML="Le joueur rouge a gagné";
  
  }
  // Joueur Jaune à gagner
  function gagnerjeuxJ() {
-     resultat.innerHTML="Jaune à gagné";
+     resultat.innerHTML="Le joueur jaune a gagné";
  }
+
+ setInterval(function(){ 
+    titre.classList.remove("petit");
+    titre.classList.add("gros");
+    setTimeout(function(){ 
+        titre.classList.remove("gros");
+        titre.classList.add("petit");
+     }, 500);
+  }, 1000);
+
+  setInterval(function(){ 
+      nav.style.transition = "2s";
+      nav.style.backgroundColor = bandeauColor[c];
+      fondjeu.style.transition = "2s";
+      fondjeu.style.borderColor = bandeauColor[c];
+      c++;
+      c == 6 ? c = 0 : true;
+  }, 1000);
+
+  setTimeout(function(){ 
+    money.style.transition = "2s";
+    money.style.opacity = "0";
+    money.style.zIndex = "-1";
+    coin.style.transition = "2s";
+    coin.style.opacity = "0";
+    coin.style.zIndex = "-1";
+ }, 3000);
+
+ function reset() {
+    //au clic de rejouer et changement de mode
+    //utiliser la boucle de gagner col pour reset les couleurs
+}
