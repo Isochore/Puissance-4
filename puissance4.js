@@ -20,6 +20,7 @@ const ai = document.querySelector(".ai");
 const fondjeu = document.querySelector(".fondjeu");
 const money = document.querySelector(".money");
 const coin = document.querySelector(".coin");
+const replay = document.querySelector("#replay");
 const arrG = [arr1, arr2, arr3, arr4, arr5, arr6, arr7];
 const titre = document.querySelector("h1");
 const bandeauColor = ["#ff0000","#ffff00","#40ff00","#1a1aff"];
@@ -59,6 +60,12 @@ ai.addEventListener("click", function () {
     humain.classList.remove("active");
     ordi.classList.remove("active");
     ai.classList.add("active");
+})
+
+
+replay.addEventListener("click", function () {
+
+    reset();
 })
 
 
@@ -369,6 +376,14 @@ function tourJoueur() {
  }, 3000);
 
  function reset() {
+    for (let i = arrG.length - 1; i >= 0; i--) {
+        for (let j = arrG[i].length - 1; j >= 0; j--) {
+            arrG[i][j].classList.remove("rouge");
+            arrG[i][j].classList.remove("jaune");
+            arrG[i][j].classList.add("blanc");
+        }
+    }
+    couleur = "rouge";
     //au clic de rejouer et changement de mode
     //utiliser la boucle de gagner col pour reset les couleurs
 }
