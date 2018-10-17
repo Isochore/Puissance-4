@@ -34,6 +34,9 @@ var winR = false;
 var winJ = false;
 var plein = 0;
 var mode = "1vs2";
+var counter = false;
+var countered = false;
+var coup, other;
 
 humain.addEventListener("click", function () {
 
@@ -115,7 +118,7 @@ function gagnerCol() {
     for (let i = arrG.length - 1; i >= 0; i--) {
         for (let j = arrG[i].length - 1; j >= 0; j--) {
 
-            verif(i, j);
+            verif(i, j, "col");
         }
         count = 0;
     }
@@ -126,7 +129,7 @@ function gagnerRow() {
     for (let j = arrG[0].length - 1; j >= 0; j--) {
         for (let i = arrG.length - 1; i >= 0; i--) {
 
-            verif(i, j);
+            verif(i, j, "row");
 
         }
         count = 0;
@@ -257,9 +260,8 @@ function pion(array) {
             gagnerCol();
             gagnerRow();
             gagnerDiag();
-            // 
 
-        } else if (mode == "1vscpu") {
+        } else if (mode == "1vsai") {
             if (couleur == "rouge") {
 
                 for (let i = array.length - 1; i >= 0; i--) {
@@ -278,7 +280,59 @@ function pion(array) {
 
                 if(winR != true && winJ != true) {
                     setTimeout(function () {
+                        console.log(counter);
+                        console.log(countered);
+                        console.log(mode);
+                        if (counter == true && countered == false && mode == "1vsai" && coup.classList.contains("blanc")) {
+                            coup.classList.add(couleur);
+                            coup.classList.remove("blanc");
+                            rempli = true;
+                            couleur == "rouge" ? couleur = "jaune" : couleur = "rouge";
+                            // countered = true;
+                        } else {
+                        let rnd = Math.floor(Math.random() * (3)+2);
+                        for (let i = arrG[rnd].length - 1; i >= 0; i--) {
 
+                            if (arrG[rnd][i].classList.contains("blanc") && rempli == false && couleur == "jaune") {
+                                arrG[rnd][i].classList.remove("blanc");
+                                arrG[rnd][i].classList.add(couleur);
+                                rempli = true;
+                                couleur == "rouge" ? couleur = "jaune" : couleur = "rouge";
+                            }
+                        }
+                        }
+                        rempli = false;
+                        counter = false;
+                        gagnerCol();
+                        gagnerRow();
+                        gagnerDiag();
+
+                    }, 800);
+                }
+
+            }
+        }
+
+
+        else if (mode == "1vscpu") {
+            if (couleur == "rouge") {
+
+                for (let i = array.length - 1; i >= 0; i--) {
+
+                    if (array[i].classList.contains("blanc") && rempli == false && couleur == "rouge") {
+                        array[i].classList.remove("blanc");
+                        array[i].classList.add(couleur);
+                        rempli = true;
+                        couleur == "rouge" ? couleur = "jaune" : couleur = "rouge";
+                    }
+                }
+                rempli = false;
+                gagnerCol();
+                gagnerRow();
+                gagnerDiag();
+
+                if(winR != true && winJ != true) {
+                    setTimeout(function () {
                         let rnd = Math.floor(Math.random() * (7));
                         for (let i = arrG[rnd].length - 1; i >= 0; i--) {
 
@@ -290,6 +344,7 @@ function pion(array) {
                             }
                         }
                         rempli = false;
+                        counter = false;
                         gagnerCol();
                         gagnerRow();
                         gagnerDiag();
@@ -299,10 +354,12 @@ function pion(array) {
 
             }
         }
+
+
     }
 }
 
-function verif(i, j) {
+function verif(i, j, align) {
     if (arrG[i][j].classList.contains("rouge")) {
         if (countColor == "rouge") {
             count++;
@@ -319,6 +376,29 @@ function verif(i, j) {
         countColor = "jaune";
     } else {
         arrG[i][j].classList.contains("blanc") ? count = 0 : true;
+    }
+
+    if (count == 3 && align == "col") {
+        coup = arrG[i][j-1];
+        if (coup) {
+        coup.classList.contains("blanc") ? counter = true : counter = false;
+        }
+    }
+    if (count == 3 && align == "row") {
+        if (i > 0) {
+        coup = arrG[i-1][j];
+        }
+        if (i < 4) {
+        other = arrG[i+3][j];
+        }
+        if (coup) {
+            if (i > 0 && coup.classList.contains("blanc") == true) {
+                counter = true;
+            } else if (i < 4 && other.classList.contains("blanc") == true) {
+                counter = true;
+                coup = other;
+            }
+        }
     }
 
     if (count >= 4 && countColor == "rouge") {
@@ -351,11 +431,13 @@ function tourJoueur() {
  // Joueur Rouge à gagner 
  function gagnerjeuxR() {
      resultat.innerHTML="Le joueur rouge a gagné";
+     document.location.href = "finr.html";
  
  }
  // Joueur Jaune à gagner
  function gagnerjeuxJ() {
      resultat.innerHTML="Le joueur jaune a gagné";
+     document.location.href = "finj.html";
  }
 
  setInterval(function(){ 
