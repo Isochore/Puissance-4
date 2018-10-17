@@ -2,6 +2,30 @@ body {
 	
 }
 
+.case:hover {
+    background-color: rgb(209, 209, 209);
+
+}
+
+.humain:hover, .ordi:hover, .ai:hover {
+    cursor: pointer;
+}
+
+.tokenred:hover {
+    cursor: url("tokenred.png"), pointer;
+}
+
+.tokenyel:hover {
+    cursor: url("tokenyel.png"), pointer;
+}
+
+.navbar-brand {
+    color: white !important;
+}
+
+#replay {
+    color:white;
+}
 
 .money {
     position: absolute;

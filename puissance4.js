@@ -41,6 +41,7 @@ humain.addEventListener("click", function () {
     ordi.classList.remove("active");
     ai.classList.remove("active");
     humain.classList.add("active");
+    reset();
 
 })
 
@@ -50,6 +51,7 @@ ordi.addEventListener("click", function () {
     humain.classList.remove("active");
     ai.classList.remove("active");
     ordi.classList.add("active");
+    reset();
 
 })
 
@@ -60,6 +62,8 @@ ai.addEventListener("click", function () {
     humain.classList.remove("active");
     ordi.classList.remove("active");
     ai.classList.add("active");
+    reset();
+
 })
 
 
@@ -334,7 +338,13 @@ function rnd(min, max) {
 // C'est à vous de jouer joueur jaune ou rouge 
 function tourJoueur() {
     joueur.innerHTML="C'est à votre tour de jouer : joueur " + couleur;
-    
+    if (couleur == "rouge") {
+        fondjeu.classList.remove("tokenyel");
+        fondjeu.classList.add("tokenred");
+    } else if (couleur == "jaune") {
+        fondjeu.classList.remove("tokenred");
+        fondjeu.classList.add("tokenyel");
+    }
  
  }
  
@@ -384,6 +394,9 @@ function tourJoueur() {
         }
     }
     couleur = "rouge";
+    fondjeu.classList.remove("tokenyel");
+    fondjeu.classList.add("tokenred");
+
     //au clic de rejouer et changement de mode
     //utiliser la boucle de gagner col pour reset les couleurs
 }
