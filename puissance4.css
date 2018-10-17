@@ -1,35 +1,53 @@
 body {
 	
 }
-h1{
+
+
+.money {
+    position: absolute;
+    left: 50%;
+    margin-left: -250px;
+    top: 50%;
+    margin-top: 130px;
+    z-index: 99;
+}
+
+.coin {
+    position: absolute;
+    left: 50%;
+    margin-left: -250px;
+    top: 50%;
+    margin-top: -25px;
+    z-index: 99;
+    width: 500px;
+}
+
+.petit{
 	color: #007bff;
 	text-transform: uppercase;
 	text-shadow: 0 3px 5px rgba(0,0,0,1);
 	padding-top: 25px;
 	padding-bottom: 25px;
 	font-size: 6rem;
-	font-family: 'Mali', cursive;
+    font-family: 'Mali', cursive;
+    transition: 0.5s;
 }
-h1:hover{
+.gros{
 	color: yellow;
 	opacity: .8;
 	text-transform: uppercase;
 	text-shadow: 0 3px 5px rgba(0,0,0,1);
 	padding-bottom: 35px;
-	font-size: 8rem;
-	transition: 1s;
+	font-size: 7rem;
+    transition: 0.5s;
+    font-family: 'Mali', cursive;
 }
 .quatre{
 	color: red;
 	font-size: 6rem;
 
 }
-.quatre:hover{
-	color: red;
-	font-size: 8rem;
-	transition: 1s;
 
-}
 .imgtitle {
 	background: url(jeu2.jpg);
 	height: 30vh;
@@ -38,7 +56,7 @@ h1:hover{
 .fondnav{
 	font-family: 'Mali', cursive;
 	font-weight: bold;
-	background-color: #007bff !important;
+	background-color: #007bff;
 
 }
 
@@ -50,6 +68,7 @@ h1:hover{
 	background-repeat: no-repeat;
 
 }
+/*  */
 .regle h2{
 	font-size: 40px;
 	padding-top: 50px;
@@ -64,7 +83,7 @@ h1:hover{
 	margin-bottom: 50px;
 }
 .fondpage{
-	background: url(regle.jpg); 
+	background: url(borne2.jpg); 
 	background-size: cover;
 	background-repeat: no-repeat;
 }
@@ -140,7 +159,12 @@ h1:hover{
 }*/
 .resultat{
 	font-size: 20px;
-	margin: 10px;
+    margin: 10px;
+    color: white;
+}
+
+.joueur {
+    color: white;
 }
 
 .reset{
@@ -150,27 +174,29 @@ h1:hover{
 
 @media (max-width: 575px) and (orientation:portrait){ 
 	
-h1{
-	color: #007bff;
-	text-transform: uppercase;
-	text-shadow: 0 3px 5px rgba(0,0,0,1);
-	padding-top: 25px;
-	padding-bottom: 25px;
-	font-size: 35px;
-	font-family: 'Mali', cursive;
-}
-h1:hover{
-	color: yellow;
-	opacity: .8;
-	text-transform: uppercase;
-	text-shadow: 0 3px 5px rgba(0,0,0,1);
-	padding-bottom: 35px;
-	font-size: 40px;
-	transition: 1s;
-}
+    .petit{
+        color: #007bff;
+        text-transform: uppercase;
+        text-shadow: 0 3px 5px rgba(0,0,0,1);
+        padding-top: 25px;
+        padding-bottom: 25px;
+        font-size: 2rem;
+        font-family: 'Mali', cursive;
+        transition: 0.5s;
+    }
+    .gros{
+        color: yellow;
+        opacity: .8;
+        text-transform: uppercase;
+        text-shadow: 0 3px 5px rgba(0,0,0,1);
+        padding-bottom: 35px;
+        font-size: 3rem;
+        transition: 0.5s;
+        font-family: 'Mali', cursive;
+    }
 .quatre{
 	color: red;
-	font-size: 35px;
+	font-size: 2rem;
 
 }
 .quatre:hover{
@@ -229,33 +255,29 @@ h1:hover{
 }
 @media (max-width: 575px) and (orientation:landscape) { 
 	
-h1{
-	color: #007bff;
-	text-transform: uppercase;
-	text-shadow: 0 3px 5px rgba(0,0,0,1);
-	padding-top: 25px;
-	padding-bottom: 25px;
-	font-size: 35px;
-	font-family: 'Mali', cursive;
-}
-h1:hover{
-	color: yellow;
-	opacity: .8;
-	text-transform: uppercase;
-	text-shadow: 0 3px 5px rgba(0,0,0,1);
-	padding-bottom: 35px;
-	font-size: 40px;
-	transition: 1s;
-}
+    .petit{
+        color: #007bff;
+        text-transform: uppercase;
+        text-shadow: 0 3px 5px rgba(0,0,0,1);
+        padding-top: 25px;
+        padding-bottom: 25px;
+        font-size: 2rem;
+        font-family: 'Mali', cursive;
+        transition: 0.5s;
+    }
+    .gros{
+        color: yellow;
+        opacity: .8;
+        text-transform: uppercase;
+        text-shadow: 0 3px 5px rgba(0,0,0,1);
+        padding-bottom: 35px;
+        font-size: 3rem;
+        transition: 0.5s;
+        font-family: 'Mali', cursive;
+    }
 .quatre{
 	color: red;
-	font-size: 35px;
-
-}
-.quatre:hover{
-	color: red;
-	font-size: 40px;
-	transition: 1s;
+	font-size: 2rem;
 
 }
 .case {
@@ -309,39 +331,35 @@ h1:hover{
 
 }
 @media (min-width: 576px) and (max-width: 767px) { 
-	h1{
-	color: #007bff;
-	text-transform: uppercase;
-	text-shadow: 0 3px 5px rgba(0,0,0,1);
-	padding-top: 25px;
-	padding-bottom: 25px;
-	font-size: 35px;
-	font-family: 'Mali', cursive;
-}
-h1:hover{
-	color: yellow;
-	opacity: .8;
-	text-transform: uppercase;
-	text-shadow: 0 3px 5px rgba(0,0,0,1);
-	padding-bottom: 35px;
-	font-size: 40px;
-	transition: 1s;
-}
+    .petit{
+        color: #007bff;
+        text-transform: uppercase;
+        text-shadow: 0 3px 5px rgba(0,0,0,1);
+        padding-top: 25px;
+        padding-bottom: 25px;
+        font-size: 3rem;
+        font-family: 'Mali', cursive;
+        transition: 0.5s;
+    }
+    .gros{
+        color: yellow;
+        opacity: .8;
+        text-transform: uppercase;
+        text-shadow: 0 3px 5px rgba(0,0,0,1);
+        padding-bottom: 35px;
+        font-size: 4rem;
+        transition: 0.5s;
+        font-family: 'Mali', cursive;
+    }
 .quatre{
 	color: red;
-	font-size: 35px;
-
-}
-.quatre:hover{
-	color: red;
-	font-size: 40px;
-	transition: 1s;
+	font-size: 3rem;
 
 }
 .case {
 	border: solid black 3px;
-	height: 50px;
-	width: 50px;
+	height: 40px;
+	width: 40px;
 
     border-radius: 50%;
 }
@@ -416,12 +434,7 @@ h1:hover{
 	font-size: 50px;
 
 }
-.quatre:hover{
-	color: red;
-	font-size: 60px;
-	transition: 1s;
 
-}
 .case {
 	border: solid black 3px;
 	height: 60px;
@@ -439,33 +452,29 @@ h1:hover{
 	background: url(jeu2.jpg);
 	height: 15vh;
 }
-	h1{
+.petit{
 	color: #007bff;
 	text-transform: uppercase;
 	text-shadow: 0 3px 5px rgba(0,0,0,1);
 	padding-top: 25px;
 	padding-bottom: 25px;
-	font-size: 50px;
-	font-family: 'Mali', cursive;
+	font-size: 3rem;
+    font-family: 'Mali', cursive;
+    transition: 0.5s;
 }
-h1:hover{
+.gros{
 	color: yellow;
 	opacity: .8;
 	text-transform: uppercase;
 	text-shadow: 0 3px 5px rgba(0,0,0,1);
 	padding-bottom: 35px;
-	font-size: 60px;
-	transition: 1s;
+	font-size: 4rem;
+    transition: 0.5s;
+    font-family: 'Mali', cursive;
 }
 .quatre{
 	color: red;
-	font-size: 50px;
-
-}
-.quatre:hover{
-	color: red;
-	font-size: 60px;
-	transition: 1s;
+	font-size: 3rem;
 
 }
 .case {
@@ -483,33 +492,33 @@ h1:hover{
 	
  @media (min-width: 992px) and (max-width: 1199px) and (orientation:landscape) {
 
-		h1{
+
+.petit{
 	color: #007bff;
 	text-transform: uppercase;
 	text-shadow: 0 3px 5px rgba(0,0,0,1);
 	padding-top: 25px;
 	padding-bottom: 25px;
-	font-size: 50px;
-	font-family: 'Mali', cursive;
+	font-size: 5rem;
+    font-family: 'Mali', cursive;
+    transition: 0.5s;
 }
-h1:hover{
+.gros{
 	color: yellow;
 	opacity: .8;
 	text-transform: uppercase;
 	text-shadow: 0 3px 5px rgba(0,0,0,1);
 	padding-bottom: 35px;
-	font-size: 60px;
-	transition: 1s;
+	font-size: 6rem;
+    transition: 0.5s;
+    font-family: 'Mali', cursive;
 }
+
 .quatre{
 	color: red;
-	font-size: 50px;
+	font-size: 5rem;
 
 }
-.quatre:hover{
-	color: red;
-	font-size: 60px;
-	transition: 1s;
 
 }
 .case {
@@ -522,8 +531,6 @@ h1:hover{
 /*.fondjeu {
 	width: 50%;
 }*/
-
-}
 @media (min-width: 992px) and (max-width: 1199px) and (orientation:portrait) {
 .imgtitle {
 	background: url(jeu2.jpg);
